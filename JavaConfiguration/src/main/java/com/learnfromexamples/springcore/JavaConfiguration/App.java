@@ -19,7 +19,6 @@ public class App {
 		// but 
 		//Employee emp = (Employee) context.getBean("empName"); 
 		// Exception in thread "main" org.springframework.beans.factory.NoSuchBeanDefinitionException: No bean named 'empName' available
-		
 
 		System.out.println(emp);  
 	}
