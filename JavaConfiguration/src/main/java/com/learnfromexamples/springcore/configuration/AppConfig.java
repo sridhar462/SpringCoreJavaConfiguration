@@ -8,7 +8,7 @@ import com.learnfromexamples.springcore.modal.Employee;
 @Configuration
 public class AppConfig {
 
-	@Bean
+	@Bean(name="sridhar")
 	public Employee getEmployee() {
 		Employee emp = new Employee();
 		emp.setEmpName("Sridhar - Spring Core - Java Config");
