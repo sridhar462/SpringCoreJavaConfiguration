@@ -12,7 +12,14 @@ public class App {
 		@SuppressWarnings("resource")
 		ApplicationContext context = new AnnotationConfigApplicationContext(AppConfig.class);
 
-		Employee emp = context.getBean(Employee.class);
+		//Employee emp = context.getBean(Employee.class);
+		
+		Employee emp = (Employee) context.getBean("sridhar");
+		
+		// but 
+		//Employee emp = (Employee) context.getBean("empName"); 
+		// Exception in thread "main" org.springframework.beans.factory.NoSuchBeanDefinitionException: No bean named 'empName' available
+		
 
 		System.out.println(emp);  
 	}
