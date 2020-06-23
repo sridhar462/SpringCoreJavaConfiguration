@@ -11,15 +11,15 @@ import com.learnfromexamples.springcore.session2.DI.episode1.SetterInjection.Wat
 @Configuration
 public class AppConfig5 {
 	
-	@Bean(name="app")
+	@Bean
 	public GalleryApp getGalleryApp() {
 		GalleryApp app = new GalleryApp();
-		app.setShare(getEmail());
+		app.setShare(getWatsApp());
 		return app;
 	}
 	
 	
-	@Bean(name="gmail")
+	@Bean
 	public IShare getEmail() {
 		IShare share = new Gmail();
 		return share;
