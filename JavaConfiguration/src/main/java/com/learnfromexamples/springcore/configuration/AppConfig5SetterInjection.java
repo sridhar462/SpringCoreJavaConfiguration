@@ -3,31 +3,31 @@ package com.learnfromexamples.springcore.configuration;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
-import com.learnfromexamples.springcore.session2.DI.episode1.SetterInjection.GalleryApp;
-import com.learnfromexamples.springcore.session2.DI.episode1.SetterInjection.Gmail;
-import com.learnfromexamples.springcore.session2.DI.episode1.SetterInjection.IShare;
-import com.learnfromexamples.springcore.session2.DI.episode1.SetterInjection.WatsApp;
+import com.learnfromexamples.springcore.session2.DI.episode1.SetterInjection.GalleryAppSetterInjection;
+import com.learnfromexamples.springcore.session2.DI.episode1.SetterInjection.GmailSetterInjection;
+import com.learnfromexamples.springcore.session2.DI.episode1.SetterInjection.IShareSetterInjection;
+import com.learnfromexamples.springcore.session2.DI.episode1.SetterInjection.WatsAppSetterInjection;
 
 @Configuration
-public class AppConfig5 {
+public class AppConfig5SetterInjection {
 	
 	@Bean
-	public GalleryApp getGalleryApp() {
-		GalleryApp app = new GalleryApp();
+	public GalleryAppSetterInjection getGalleryApp() {
+		GalleryAppSetterInjection app = new GalleryAppSetterInjection();
 		app.setShare(getWatsApp());
 		return app;
 	}
 	
 	
 	@Bean
-	public IShare getEmail() {
-		IShare share = new Gmail();
+	public IShareSetterInjection getEmail() {
+		IShareSetterInjection share = new GmailSetterInjection();
 		return share;
 	}
 	
 	@Bean
-	public IShare getWatsApp() {
-		IShare share = new WatsApp();
+	public IShareSetterInjection getWatsApp() {
+		IShareSetterInjection share = new WatsAppSetterInjection();
 		return share;
 	}
 }
